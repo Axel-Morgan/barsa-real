@@ -1,0 +1,13 @@
+.container_comment
+    h2 Ваш Комментарий
+    form(onsubmit="return false;" id="mainForm")
+        .block_form
+            input(type="text" class="form-name" id="formName" maxlength="50" autocomplete="off" placeholder="Введите ваше имя" required)
+        .block_form
+            textarea(type="text" class="form-comment" id="formComment" maxlength="350" autocomplete="off" placeholder="Ваш комментарий" required)
+        button(type="submit" class="form-button" onclick="inputData()") Cохранить
+        
+    .show-form
+        h2 Комментарии
+        hr
+        .comments(id="comments")

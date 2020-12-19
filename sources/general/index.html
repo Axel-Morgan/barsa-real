@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/script.js" defer="defer"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        
+        <!--img(src="images/barsa.png" alt="Герб Барсы")-->
+        <div class="emblem"></div>
+        <h1>My classico</h1>
+        
+        <div class="emblem"></div>
+        <!--(src="images/real.png" alt="Герб Реала")-->
+        <!--button Авторизация-->
+      </div>
+    </header>
+    <div class="main">
+      <div class="main__border"></div>
+      <div class="main__content">
+        <!--Score block-->
+        <section class="main__score">
+          <h2>Счет противостояний</h2>
+          <div class="main__score_total">
+            <div class="total">
+              <p>96</p><span>Барса</span>
+            </div>
+            <p class="tire">-</p>
+            <div class="total">
+              <p>97</p><span>Реал</span>
+            </div>
+          </div>
+        </section>
+        <!--Content block-->
+        <section class="main__content-block">
+          <!--Table block-->
+          <div class="main__content-block_table">
+            <table>
+              <tr>
+                <th colspan="4">Таблица Ла Лиги</th>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Команда</td>
+                <td>M</td>
+                <td>O</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Реал Сосьедат</td>
+                <td>10</td>
+                <td>23</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Атлетико</td>
+                <td>8</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Вильярреал</td>
+                <td>10</td>
+                <td>19</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td class="real-bold">Реал Мадрид</td>
+                <td>9</td>
+                <td>17</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Кадис</td>
+                <td>10</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Гранада</td>
+                <td>9</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Севилья</td>
+                <td>8</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Атлетик</td>
+                <td>9</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Валенсия</td>
+                <td>10</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Эльче</td>
+                <td>8</td>
+                <td>12</td>
+              </tr>
+            </table>
+          </div>
+          <!--Text block-->
+          <div class="main__content-block_content">
+            <h2>Больше чем дерби </h2>
+            <p>Исторический термин &#171;Эль Классико&#187; (&#171;классический&#187;) в чемпионате Испании использовался для обозначения матчей между клубами, которые встречались между собой наибольшее кол-во раз, иными словами, между клубами, которые никогда не покидали Примеру. Таких клубов в чемпионате трое - это &#171;Реал Мадрид&#187;, &#171;Барселона&#187; и &#171;Атлетик&#187; Бильбао.</p>
+            <p>Но в последние десятилетия матчи между &#171;Реал Мадридом&#187; и &#171;Барселоной&#187; вышли за рамки исключительно испанского чемпионата, они обрели мировое значение. </p>
+            <p>Это матчи между двумя лучшими клбами мира. В каком бы турнире они не проводились, они привлекают внимание всего мира. И термин &#171;Эль Классико&#187; теперь ассоцицируется исключительно с этим противостоянием. </p>
+            <p>&#171;Эль Классико&#187; - Это матч между &#171;Реал Мадридом&#187; и &#171;Барселоной&#187;
+              <!--Slides with mathes-->
+              <div class="match_slider"> 
+                <div class="slider_window">
+                  <div class="slide">
+                    <time>01.03.2020</time>
+                    <h2>Барса - Реал</h2>
+                    <p>2 - 0</p>
+                  </div>
+                  <div class="slide">
+                    <time>18.12.2019</time>
+                    <h2>Барса - Реал</h2>
+                    <p>0 - 0</p>
+                  </div>
+                  <div class="slide">
+                    <time>03.03.2019</time>
+                    <h2>Реал - Барса</h2>
+                    <p>0 - 1</p>
+                  </div>
+                  <div class="slide">
+                    <time>28.10.2018</time>
+                    <h2>Барса - Реал</h2>
+                    <p>5 - 1</p>
+                  </div>
+                </div>
+                <div class="slider_dots">
+                   
+                  <span class="arrow" onclick="moveSlide(true)">&#9668;</span>
+                   
+                  <span class="dot" onclick="moveSlideDots(0)"></span>
+                   
+                  <span class="dot" onclick="moveSlideDots(1)"></span>
+                   
+                  <span class="dot" onclick="moveSlideDots(2)"></span>
+                   
+                  <span class="dot" onclick="moveSlideDots(3)"></span>
+                   
+                  <span class="arrow" onclick="moveSlide(false)">&#9658;</span>
+                </div>
+              </div>
+            </p>
+          </div>
+          <!--Info-cards-->
+          <div class="main__content-block_info-map">
+            <div class="card">
+              <div class="card_block_h">
+                <h2>Тина Канделаки: Рейтинг классико не сравнить с &#171;Зенит&#187; - &#171;Спартак&#187;.</h2>
+              </div>
+              <div class="card_block_p">
+                <p>- Все регулирует договор. В том числе по зарубежным чемпионатам. Есть распределение между тематическими и федеральными каналами. Оно, естественно, идет в пользу топовых игр.</p>
+                <p>Хотя наш чемпионат зрители смотрят с гораздо большим интересом, чем любой западный. Это к слову об испанской Примере. Рейтинг эль-классико не идет ни в какое сравнение с матчем &#171;Зенит&#187;-&#171;Спартак&#187;.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card_block_h">
+                <h2>Тина Канделаки: Рейтинг классико не сравнить с &#171;Зенит&#187; - &#171;Спартак&#187;.</h2>
+              </div>
+              <div class="card_block_p">
+                <p>- Все регулирует договор. В том числе по зарубежным чемпионатам. Есть распределение между тематическими и федеральными каналами. Оно, естественно, идет в пользу топовых игр.</p>
+                <p>Хотя наш чемпионат зрители смотрят с гораздо большим интересом, чем любой западный. Это к слову об испанской Примере. Рейтинг эль-классико не идет ни в какое сравнение с матчем &#171;Зенит&#187;-&#171;Спартак&#187;.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card_block_h">
+                <h2>Тина Канделаки: Рейтинг классико не сравнить с &#171;Зенит&#187; - &#171;Спартак&#187;.</h2>
+              </div>
+              <div class="card_block_p">
+                <p>- Все регулирует договор. В том числе по зарубежным чемпионатам. Есть распределение между тематическими и федеральными каналами. Оно, естественно, идет в пользу топовых игр.</p>
+                <p>Хотя наш чемпионат зрители смотрят с гораздо большим интересом, чем любой западный. Это к слову об испанской Примере. Рейтинг эль-классико не идет ни в какое сравнение с матчем &#171;Зенит&#187;-&#171;Спартак&#187;.</p>
+              </div>
+            </div>
+          </div>
+          <!--Slides with players-->
+        </section>
+        <section class="main__player-sliders">
+          <div class="firstSlider">
+            <div class="container_slides">
+              <div class="slide_one">
+                <h2>0 Рональд Куман</h2>
+              </div>
+              <div class="slide_one">
+                <h2>1 Марк-Андре тер Штеген</h2>
+              </div>
+              <div class="slide_one">
+                <h2>2 Сержиньо Дест</h2>
+              </div>
+              <div class="slide_one">
+                <h2>3 Жерар Пике</h2>
+              </div>
+              <div class="slide_one">
+                <h2>4 Рональд Араухо</h2>
+              </div>
+              <div class="slide_one">
+                <h2>5 Серхио Бускетс</h2>
+              </div>
+              <div class="slide_one">
+                <h2>6 Карлес Аленья</h2>
+              </div>
+              <div class="slide_one">
+                <h2>7 Антуан Гризманн</h2>
+              </div>
+              <div class="slide_one">
+                <h2>8 Миралем Пьянич</h2>
+              </div>
+            </div>
+          </div>
+          <div class="secondSlider">
+            <div class="container_slides">
+              <div class="slide_two">
+                <h2>0 Зинедин Зидан</h2>
+              </div>
+              <div class="slide_two">
+                <h2>1 Тибо Куртуа</h2>
+              </div>
+              <div class="slide_two">
+                <h2>2 Дани Карвахаль</h2>
+              </div>
+              <div class="slide_two">
+                <h2>3 Эдер Милитао</h2>
+              </div>
+              <div class="slide_two">
+                <h2>4 Серхио Рамос</h2>
+              </div>
+              <div class="slide_two">
+                <h2>5 Рафаэль Варан</h2>
+              </div>
+              <div class="slide_two">
+                <h2>6 Начо Фернандес</h2>
+              </div>
+              <div class="slide_two">
+                <h2>7 Эден Азар</h2>
+              </div>
+              <div class="slide_two">
+                <h2>8 Тони Кроос</h2>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main__comments">
+          <div class="container_comment">
+            <h2>Ваш Комментарий</h2>
+            <form onsubmit="return false;" id="mainForm">
+              <div class="block_form">
+                <input class="form-name" type="text" id="formName" maxlength="50" autocomplete="off" placeholder="Введите ваше имя" required="required"/>
+              </div>
+              <div class="block_form">
+                <textarea class="form-comment" type="text" id="formComment" maxlength="350" autocomplete="off" placeholder="Ваш комментарий" required="required"></textarea>
+              </div>
+              <button class="form-button" type="submit" onclick="inputData()">Cохранить</button>
+            </form>
+            <div class="show-form">
+              <h2>Комментарии</h2>
+              <hr/>
+              <div class="comments" id="comments"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="main__border"></div>
+    </div>
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+- var num_picture = 4;
+
+- var index_dot = 0;
+- var index_slide = 0;
+- var maxLine = 0;
+- var line = ' ';
+
+.match_slider 
+    .slider_window
+        each val in [{data: '01.03.2020', score_1: 2, score_2: 0, real: ["Винисиус", "Марино Диас"], barsa: []}, {data: '18.12.2019', score_1: 0, score_2: 0, real: [], barsa: []}, {data: '03.03.2019', score_1: 0, score_2: 1, real: [], barsa: ["Ракитич"]}, {data: '28.10.2018', score_1: 5, score_2: 1, real: ["Марсело"], barsa: ["Коутиньо","Суарес","Суаресс","Суарес","Видаль"]}]
+            .slide
+                time= val.data
+
+                if (val.score_1 < val.score_2)
+                    - maxLine = val.score_1
+                    h2 Реал - Барса
+                else 
+                    - maxLine = val.score_2
+                    h2 Барса - Реал
+                    
+                p= val.score_1 + ' - ' + val.score_2    
+                
+    .slider_dots
+        while index_dot < num_picture + 2
+            | 
+            |
+            if (index_dot == 0)
+                span(class="arrow" onclick="" + 'moveSlide(' + 'true' + ')') &#9668;
+            else if (index_dot == num_picture + 1)
+                span(class="arrow" onclick="" + 'moveSlide(' + 'false' + ')') &#9658;
+            else
+                span(class="dot" onclick="" + 'moveSlideDots(' + (index_dot - 1) + ')')
+            - index_dot++
+
+

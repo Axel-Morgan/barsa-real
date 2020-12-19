@@ -1,0 +1,24 @@
+.main__content-block_table
+    table
+        tr
+            th(colspan="4") Таблица Ла Лиги
+        //-ЗАПОЛНЯЕМ ТАБЛИЦУ (ИСПОЛЬЗОВАТЬ РЕЖИМ ПЕРЕНОС СТРОК В ST3 ИЛИ VScode)
+        - var index = 0;
+        - var in_bool = false;
+        each val in [{team_name: 'Команда', total_M: 'M', total_O: 'O'}, {team_name: 'Реал Сосьедат', total_M: '10', total_O: '23'}, {team_name: 'Атлетико', total_M: '8', total_O: '20'}, {team_name: 'Вильярреал', total_M: '10', total_O: '19'}, {team_name: 'Реал Мадрид', total_M: '9', total_O: '17'}, {team_name: 'Кадис', total_M: '10', total_O: '14'}, {team_name: 'Гранада', total_M: '9', total_O: '14'}, {team_name: 'Севилья', total_M: '8', total_O: '13'}, {team_name: 'Атлетик', total_M: '9', total_O: '12'}, {team_name: 'Валенсия', total_M: '10', total_O: '12'}, {team_name: 'Эльче', total_M: '8', total_O: '12'}]
+            tr
+                //-1-ая колонка
+                if (index > 0)
+                    td= index
+                else 
+                    td= ""
+                //-2-ая колонка
+                if (val.team_name == 'Реал Мадрид')
+                    td(class="" + 'real-bold')= val.team_name
+                else
+                    td= val.team_name
+                //-3-я колонка
+                td= val.total_M
+                //-4-я колонка
+                td= val.total_O
+                - index++

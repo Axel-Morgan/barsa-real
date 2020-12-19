@@ -1,0 +1,293 @@
+
+$pbottom_h2: 15px;
+
+$width_table: 20%;
+$width_content: 50%;
+$width_card: 20%;
+
+.main__content-block{
+    display: flex;
+    flex-direction: row;
+}
+
+//-------------------------------------------------------ТАБЛИЦА
+.main__content-block_table{
+    width: $width_table;
+    margin-left: 3%;
+    margin-top: 25px + $pbottom_h2;
+
+    table{
+        border: 1px solid black;
+        width: 100%;
+
+        th{
+            background-color: $my_pink;
+            border: 1px solid black;
+            color: white;
+            height: 30px;
+            font-size: 12px;
+            font-family: Roboto-Thin;
+        }
+
+        tr{
+            background-color: rgb(237, 240, 245);
+            height: 30px;
+            font-family: Roboto-Regular;
+            font-size: 10px;
+            text-align: center;
+            
+            &:nth-of-type(2n){
+                background-color: white;
+            }
+
+            &:nth-of-type(2), .real-bold{
+                font-family: Roboto-Bold;
+            }
+
+            td:nth-of-type(2){
+                text-align: left;
+            }
+        }
+
+    }
+}
+
+//-------------------------------------------------------КОНТЕНТ С ТЕКСТОМ 
+.main__content-block_content{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 2%;
+    text-align: center;
+    width: $width_content;
+    color: white;
+    font-family: Roboto-Regular;
+
+    h2{
+        padding-bottom: $pbottom_h2;
+    }
+
+    p{
+        text-align: justify;
+        text-indent: 13px;
+        line-height: 15px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding-bottom: 10px;
+    }
+}
+
+//-------------------------------------------------------СЛАЙДЕР МАТЧЕЙ
+.match_slider{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 250px;
+    max-height: 250px;
+    margin-top: 30px;
+    border-radius: 25px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.slider_window{
+    display: flex;
+    flex-direction: row;
+    background-color: #000;
+    height: 90%;
+    z-index: 2;
+
+    .slide{
+        transition: all 0.8s ease-out;
+        box-sizing: border-box;
+        padding: 15px;
+        min-width: 100%;
+        min-height: 100%;
+        position: relative;
+        z-index: 3;
+
+        @for $i from 0 through 3 {
+            &:nth-of-type(#{$i + 1}){
+            background-image: url(../images/slider_mathes/#{$i}.jpg);
+            background-size: 100% 100%;
+            }
+        }
+    }
+
+    time, h2, p{
+        width: 100%;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    time{
+        margin-top: 10px;
+        font-family: Roboto-Light;
+        font-size: 24px; 
+    }
+
+    h2{
+        margin-top: 20px;
+        font-family: Roboto-Thin;
+        letter-spacing: 2px;
+        font-size: 15px; 
+    }
+
+    p{
+        font-family: Roboto-Bold;
+        letter-spacing: -2px;
+        font-size: 25px; 
+    }
+}
+
+.slider_dots{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 10%;
+
+    span{
+        width: 15px;
+        height: 15px;
+        margin: 0 15px;
+        background-color: #fff;
+        border: 1px solid black;
+        border-radius: 15px;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.15, 1.15);
+            transition: all 0.2s ease-out;
+        }
+    }
+
+    .arrow{
+        background-color: none;
+        border: none;
+        border-radius: none;
+        color: black;        
+    }
+}
+//-------------------------------------------------------ИНФО-КАРТЫ 
+.main__content-block_info-map{
+    width: $width_card;
+    margin-top: 25px + $pbottom_h2;
+}
+
+.card{
+    $circle: 15px;
+
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    .card_block_h{
+        border-radius: $circle $circle 0 0;
+        background-color: rgb(121,44,96);
+    }
+
+    .card_block_p{
+        border-radius: 0 0 $circle $circle;
+        background-color:rgb(47,66,142);
+    }
+
+    &:nth-of-type(2n){
+
+        .card_block_h{
+            background-color: rgb(47,66,142);
+        }
+
+        .card_block_p{
+            background-color: white;
+        }
+
+        p{
+            color: black;
+        }
+    }
+
+    h2{
+        width: 100%;
+        font-size: 10px;
+        padding: 15px 5px 15px 5px;
+        box-sizing: border-box;
+        text-align: center;
+        color:white;
+        font-family: Roboto-Light;
+    }
+
+    p{
+        text-align: center;
+        font-size: 10px;
+        color:white;
+        font-family: Roboto-Light;
+        padding: 5px 10px 5px 10px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .main__content-block{
+        flex-direction: column;
+    }
+
+    .main__content-block_table{
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 25px + $pbottom_h2;
+    }
+    .main__content-block_content{
+        width: 90%;
+        margin-top: 30px; 
+        margin-left: 3%;
+    }
+
+    .main__content-block_info-map{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 25px + $pbottom_h2;
+    }
+
+    .card{
+        margin: 0px 10px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .main__content-block_info-map{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 25px;
+    }
+
+    .card{
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .main__content-block_info-map{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .match_slider{
+        min-height: 180px;
+        max-height: 180px;
+        margin-top: 30px;
+        border-radius: 25px;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .slider_dots{
+        span{
+            width: 10px;
+            height: 10px;
+        }
+    }
+}

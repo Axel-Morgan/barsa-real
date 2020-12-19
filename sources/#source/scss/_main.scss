@@ -1,0 +1,63 @@
+$my_pink: rgb(165,0,68);
+$my_yellow: rgb(216,175,5);
+
+.main{
+    display: flex; 
+    width: 100%;
+    justify-content: space-between;
+}
+
+.main__border{
+  $wb: 100/7 * 1%;
+
+  min-height: 100vh;
+  margin: 0px 9px;
+  width: 7%;   
+
+  background: linear-gradient(
+  to right, 
+  $my_pink $wb, 
+  $my_yellow $wb, 
+  $my_yellow 2 * $wb, 
+  $my_pink 2 * $wb, 
+  $my_pink 3 * $wb,
+  $my_yellow 3 * $wb, 
+  $my_yellow 4 * $wb, 
+  $my_pink 4 * $wb,
+  $my_pink 5 * $wb,
+  $my_yellow 5 * $wb,
+  $my_yellow 6 * $wb,  
+  $my_pink 6 * $wb
+  ); 
+}
+
+.main__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 130px;
+    box-sizing: border-box;
+    width: 85%;
+}
+
+ /*------------------------ТАБЛО------------------------*/
+@import '_main_score-block';
+
+ /*------------------------КОНТЕНТ-ЧАСТЬ------------------------*/
+@import '_main_content-block';
+
+ /*------------------------СЛАЙДЕРЫ С ИГРОКАМИ------------------------*/
+ @import '_main_player-slider';
+
+ /*------------------------------КОММЕНТАРИИ----------------------*/
+ @import '_comments';
+
+ @media screen and (max-width: 400px){
+    .main__content{
+        width: 100%;
+    }
+
+    .main__border{
+        display: none;
+    }
+ }

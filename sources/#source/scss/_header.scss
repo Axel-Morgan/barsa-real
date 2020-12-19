@@ -1,0 +1,101 @@
+header{
+    display: flex;
+    width: 100%;
+    position: fixed;
+    height: 100px;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; 
+    z-index: 10;
+}
+
+.container{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    background-color:rgb(162,33,74);
+    border: 1px solid black;
+    border-radius: 15px;   
+    box-shadow: 0 6px 10px -4px black;
+    z-index: 11;
+
+    h1{
+        font-size: 32px;
+        color: white;
+        text-transform: uppercase;
+        font-family: Roboto-Light; 
+        letter-spacing: 1px;
+    }
+
+    .emblem{
+        margin: 0px 10px;
+        box-sizing: border-box;
+        background-size: 100% 100%;
+        width: 80px;
+        height: 80px;
+        
+        &:nth-of-type(1){
+            background-image: url(../images/barsa.png);
+        }
+
+        &:last-of-type{
+            background-image: url(../images/real.png);
+        }
+    }
+}
+
+@media screen and (max-width: 900px){
+    .container{
+        height: 80%;
+
+        .emblem{
+            width: 70px;
+            height: 70px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px){
+    .container{
+        .emblem{
+            width: 55px;
+            height: 55px;
+        }
+
+        h1{
+            font-size: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    .container{
+        height: 70%;
+
+        .emblem{
+            width: 45px;
+            height: 45px;
+        }
+
+        h1{
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: 350px){
+    .container{
+        height: 60%;
+        width: 95%;
+
+        .emblem{
+            width: 45px;
+            height: 45px;
+        }
+
+        h1{
+            font-size: 14px;
+        }
+    }
+}

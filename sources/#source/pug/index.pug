@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+html(lang="en")
+    //-Head
+    include modules/head.pug
+    
+    body
+        //-Header
+        include modules/header.pug
+        
+        //-Main
+        .main
+            //-Left Vertical Line
+            .main__border
+            //-Middle Content Block
+            .main__content
+                //Score block
+                section.main__score
+                    include modules/section_main-score.pug
+
+                //Content block
+                section.main__content-block
+                    //Table block
+                    include modules/section_table-score.pug
+                    //Text block
+                    include modules/section_text.pug
+                        //Slides with mathes
+                        include modules/section_match-slider.pug
+                    //Info-cards
+                    include modules/section_info-cards.pug   
+                    //Slides with players
+                section.main__player-sliders
+                    include modules/section_player-slider.pug
+                section.main__comments
+                    include modules/comments.pug
+            //-RIGHT BORDER
+            .main__border
+        footer

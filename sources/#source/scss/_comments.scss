@@ -1,0 +1,127 @@
+.main__comments{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 300px;
+}
+
+.container_comment{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 70%;
+    height: auto;
+
+    h2{
+        color: white;
+        font-family: Roboto-Light;
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+}
+
+.form-name{
+    width: 40%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    padding: 0px 20px;
+    outline: none;
+    font-size: 24px;
+    font-family: Roboto-Light;
+}
+
+.form-comment{
+    width: 100%;
+    min-height: 150px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
+    font-family: Roboto-Light;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.form-button{
+    width: 140px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #DFF1E1;
+    cursor: pointer;
+    outline: none;
+
+    &:active{
+        background-color: #B4E4B9;
+    }
+}
+
+.show-form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px; 
+    width: 100%;
+
+    hr{
+        width: 100%;
+    }
+}
+
+.comment-block{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 10px 20px 20px 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+
+    p:nth-of-type(1){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: 26px;
+        font-family: Roboto-Bold;
+
+        span{
+            font-size: 14px;
+            font-family: Roboto-Thin;
+            color: #2B2B2B;
+            cursor: pointer;
+        }
+    }
+
+    p:nth-of-type(2){
+        font-size: 20px;
+        font-family: Roboto-Light;
+        margin-top: 10px;
+        word-break: break-all;
+    }
+}
+
+@media screen and (max-width: 890px){
+    .form-name{
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .form-comment{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .container_comment{
+        width: 90%;
+    }
+    .form-name{
+        width: 55%;
+    }
+
+    .comment-block{
+        width: 90%;
+    }
+}

@@ -1,0 +1,51 @@
+.main__score{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+
+    h2{
+        color: white;
+        font-size: 24px;
+        font-family: Roboto-Bold;
+        text-transform: uppercase;
+    }
+}
+
+.main__score_total{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px; 
+
+    p{
+        font-size: 100px;
+        font-family: Roboto-Bold;
+    }
+
+    span{
+        display: block;
+        font-size: 24px;
+        font-family: Roboto-Bold;
+        text-transform: uppercase;
+        margin-top: -10px;
+    }
+
+    .tire{
+        color: white;
+    }
+
+    .total{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px 15px;
+        
+        &:first-of-type{
+            color: $my_pink;
+        }
+    
+        &:last-of-type{
+            color: $my_yellow;
+        }
+    }
+}
