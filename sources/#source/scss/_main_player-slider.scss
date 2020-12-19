@@ -52,7 +52,7 @@
 
     @for $i from 0 through 8 {
         .slide_one:nth-of-type(#{$i + 1}){
-            background-image: url(../images/_slider_barsa_players/#{$i}.png);
+            background-image: url(../images/slider_barsa_players/#{$i}.png);
         }
     }
 }
@@ -73,7 +73,7 @@
         .slide_two:nth-of-type(#{$i + 1}){
             min-width: 100%;
             min-height: 100%;
-            background-image: url(../images/_slider_real_players/#{$i}.png);
+            background-image: url(../images/slider_real_players/#{$i}.png);
             background-size: 100% 100%;
         }
     }
